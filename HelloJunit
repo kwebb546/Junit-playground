@@ -1,0 +1,118 @@
+package practicingJava;
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+import java.util.Arrays;
+
+public class HelloJunit{
+	
+	private static final int PROCESSED = 42;
+	private static final int PENDING= 40;
+	private static final int PROCESSING = 41;
+	
+	private static final String[] MY_STATE_VALUES = {"PENDING","PROCESSING", "PROCESSED"};
+	
+	public String[] states() {
+		return Arrays.copyOf(MY_STATE_VALUES, MY_STATE_VALUES.length);
+	}
+	
+	@Test
+	public void shouldreturnHelloCum() {
+		Person kurtis = new Person();
+		assertEquals("Hello cum",kurtis.helloWorld());
+	}
+	
+	@Test
+	public void shouldReturnHelloKurtis() {
+		Person person = new Person();
+		assertEquals("Hello Kurtis", person.hello("Kurtis"));
+		
+	}
+	
+	@Test
+	public void shouldReturnNumberOfPersons() {
+		Person person1;
+		int i = 0;
+		
+		
+		while(i<4) {
+			person1 = new Person();
+			i++;
+			
+		}
+	
+
+		
+		
+		
+		
+		assertEquals(4, Person.numberOfPersons());
+	}
+	
+	@Test
+	public void demostrateArrays() {
+	Person persons [] = new Person[4];
+	persons[0] = new Person();
+	persons[1] = new Person();
+	persons[2] = new Person();
+	persons[3] = new Person();
+	
+	for(int i=0;i<persons.length;i++){
+		persons[i]= new Person();
+		
+	}
+	
+	for(int i = 0;i<persons.length;i++) {
+		persons[i]= new Person();
+	}
+	
+	for(Person person: persons){
+		person.helloWorld();
+	}
+	
+	Person myPerson = new Person();
+	Person myPerson2 = null;
+	
+	
+	 Person[] persons2 = {persons[0],persons[3], myPerson, myPerson2, persons[2]};
+	 
+	 LoggingLevel state = LoggingLevel.PROCESSING;
+	 int myState = 42;
+	 
+	 switch(state) {
+	 	case PENDING:
+	 	case PROCESSING:
+	 	case PROCESSED:
+	 		
+	 	
+	 
+	 
+	 }
+	
+	
+	 
+
+	
+
+	}
+	
+	
+	@Test
+	public void demonstarteBoolean() {
+		
+		int i = 4;
+		int j = 4;
+		boolean areEqual = i !=j;
+		
+		if (i > j) {
+			
+		}
+		else if (j>1) {
+			
+		}else if (areEqual) {
+	
+
+
+		}
+}
+}
